@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    --azul: #246CEA;
+    --darkBlue: #0f101b;
+    --darkSecond: #1a192a;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem
+}
+a:hover{
+    color: #fff;
+}
+.title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 30px;
+}
+.description{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+p{
+    font-size: 1.3rem;
+}
+.button{
+    background: var(--azul);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.button:hover{
+    background: var(--darkSecond);
+    border: 1px solid #fff;
+}
+body{
+    background: var(--darkBlue);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+/* === HEADER === */
+header{
+    position: fixed;
+    width: 100vw;
+    background: var(--darkSecond);
+}
+header nav .logo-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+header nav .logo-header a{
+    font-size: 1.5rem;
+}
+header .logo-header .menu-toggle{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 32px;
+    cursor: pointer;
+}
+header .logo-header .menu-toggle .one,
+header .logo-header .menu-toggle .two,
+header .logo-header .menu-toggle .three{
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    margin: 3px auto;
+    transition: 0.3s;
+}
+header .logo-header .menu-toggle.menuActive .one{
+    /* transform: rotate(45deg) translate(0px, 13px); */
+    transform: rotate(45deg) translate(4px, 13px);
+}   
+header .logo-header .menu-toggle.menuActive .two{
+    opacity: 0;
+}
+header .logo-header .menu-toggle.menuActive .three{
+    /* transform: rotate(-45deg) translate(0px, -12px); */
+    transform: rotate(-45deg) translate(0px, -9px);
+}
+
+header ul.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 7vh;
+    right: -50vw;
+
+    transition:.5s;
+    padding: 10px;
+    background: var(--darkSecond);
+    
+}
+header ul.nav.showMenu{
+    right: 0;
+}
+/* === MAIN === */
+main{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100vh;
+}
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    padding-top: 70px;
+
+    width: 90%;
+    max-width: 1550px;
+    margin: auto;
+    border: 1px solid #fff;
+}
+/* === HOME === */
+section#home{
+    display: flex;
+    justify-content: center;
+}
+.content-home{
+    display: grid;
+    grid-template-columns: 10% 50% 40%;
+    align-items: center;
+    margin: auto;
+}
+.content-home #social-networks{
+    display: flex;
+    flex-direction: column;
+}
+.content-home #social-networks a{
+    font-size: 2rem;
+    margin: 5px auto;
+    color: var(--azul);
+}
+.content-home #photo{
+    margin-left: 40px;
+}
+.content-home #photo img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+}
+/* === RESPONSIVIDADE === */
+@media (min-width: 1700px){
+    header nav.navbar{
+        justify-content: space-around;
+    }
+}
+@media (min-width: 770px){
+    /* ==== HEADER ==== */
+    header nav .logo-header{
+        width: auto;
+    }
+    header nav .logo-header .menu-toggle{
+        display: none;
+    }
+    header ul.nav{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        right: 0;
+        transition: none;
+        padding: 0;
+        background: var(--darkSecond);
+        
+    }
+}   
+
+@media(max-width: 1024){
+
+}
+@media (max-width: 769px) and (min-width: 425px){
+    header ul.nav{
+        width: 35vw;
+    }
+}
+@media(max-width: 769px){
+    header nav ul.nav .nav-item{
+        margin: 10px auto;
+    }
+    header ul.nav.showMenu{
+        width: 50vw;
+    }
+    .content-home{
+        grid-template-columns: 100%;
+        grid-template-areas: 'photo' 'social' 'intro';
+        align-items:center;
+        justify-content:center;
+        margin: auto;
+    }
+    .content-home #social-networks{
+        grid-area: social;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .content-home #social-networks a{
+        margin: 10px;
+    }
+    .content-home #introduction{
+        grid-area: intro;
+        text-align:center;
+    }
+    .content-home #photo{
+        grid-area: photo;
+        margin: 0;
+        text-align:center;
+    }
+    .content-home #photo img{
+        max-width: 250px;
+    }
+}
+@media (max-width: 425px){
+    .title{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .description{
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .button{
+        font-size: 1rem;
+    }
+}
