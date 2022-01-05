@@ -229,6 +229,9 @@ header nav.navbar ul.nav li.nav-item i.bi{
 }
 
 /* === CONTACT === */
+section.contact{
+    padding-top: 43px;
+}
 .content-contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
