@@ -32,6 +32,9 @@ a:hover{
     color: #fff;
     background: var(--darkSecond);
 }
+span{
+    color: #fff;
+}
 .title{
     font-size: 2.3rem;
     font-weight: bold;
@@ -278,6 +281,10 @@ footer{
 .social-networks a:hover{
     text-decoration: none;
 }
+footer p {
+    font-size: .9rem;
+    text-align:center;
+}
 
 
 @media (min-width: 1700px){
@@ -313,7 +320,7 @@ footer{
     
         position: absolute;
         top: 55px;
-        right: -50vw;
+        right: -200vw;
         width: 50vw;
         height: 100vh;
     
@@ -322,7 +329,7 @@ footer{
         background: var(--darkSecond);
     }
     header nav.navbar ul.nav.showMenu{
-        right: 0;
+        right: -10px;
     }
 
     header nav.navbar .menu-toggle{
@@ -442,6 +449,21 @@ footer{
     .button{
         font-size: 1.2rem;
     }
+    
+    /* == SKILS == */
+    section.skills{
+        padding-bottom: 0;
+    }
+    .skill{
+        width: 150px;
+        height: 150px;
+    }
+    .skill img{
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
     /* === HEADER === */
     header nav.navbar ul.nav{
         display: flex;
@@ -450,7 +472,7 @@ footer{
     
         position: absolute;
         top: 55px;
-        right: -100VW;
+        right: -200VW;
         width:  100vw;
         height: 100vh;
     
@@ -461,5 +483,7 @@ footer{
 }
 @media(max-width: 375px){
     /* ==== HOME ==== */
-
+    p{
+        font-size: .9rem;
+    }
 }
