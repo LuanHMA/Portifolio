@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
-    background: var(--darkBlue);
+    background: #2b293f;
     color: var(--azul)
 }
 body::-webkit-scrollbar-thumb{
