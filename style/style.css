@@ -9,6 +9,13 @@ html{
     --darkSecond: #1a192a;
     scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+    background: var(--darkBlue);
+    color: var(--azul)
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--azul)
+}
 a{
     text-decoration: none;
     color: #fff;
@@ -16,6 +23,7 @@ a{
 }
 a:hover{
     color: #fff;
+    text-decoration: none;
 }
 .modal{
     top: 24%;
@@ -32,7 +40,7 @@ a:hover{
 .description{
     font-size: 1.6rem;
     font-weight: 600;
-    color: #22b8ff;
+    color: var(--azul);
 }
 p{
     font-size: 1.1rem;
@@ -83,9 +91,10 @@ section h1.titulo{
 header{
     position: fixed;
     width: 100vw;
-    background: var(--darkSecond);
-    z-index: 1;
+    background: var(--darkBlue);
+    z-index: 120;
 }
+
 header nav.navbar{
     display: flex;
     justify-content: space-between;
@@ -204,8 +213,17 @@ header nav.navbar ul.nav li.nav-item i.bi{
     border: 3px solid #fff;
     border-radius: 10px;
 }
-
-
+.content-carousel img{
+    width: 100%;
+    max-width: 200px;
+    object-fit: cover;
+}
+.content-carousel .info-project{
+    display: flex;
+}
+.content-projects .info-project .description-project{
+    margin: auto 20px;
+}
 
 /* === CONTACT === */
 .content-contact{
@@ -241,6 +259,24 @@ header nav.navbar ul.nav li.nav-item i.bi{
 .form-contact .field input::placeholder,
 .form-contact .field textarea::placeholder{
     color: rgb(216, 213, 213);
+}
+/* === FOOTER === */
+footer{
+    padding: 40px;
+    height: auto;
+    margin-top: 74px;
+    background: var(--darkSecond);
+}
+.content-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-networks a{
+    margin: auto 5px;
+}
+.social-networks a:hover{
+    text-decoration: none;
 }
 
 
@@ -328,6 +364,14 @@ header nav.navbar ul.nav li.nav-item i.bi{
         flex-direction: column;
         width: 90%;
     }
+    /* ==== PROJETOS ==== */
+    .content-carousel .info-project{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-projects .info-project .description-project{
+        margin: 20px auto;
+    }   
     
 
 }
