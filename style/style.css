@@ -9,11 +9,11 @@ html{
     --darkSecond: #1a192a;
     scroll-behavior: smooth;
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
     background: #2b293f;
     color: var(--azul)
 }
-body::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb{
     background: var(--azul)
 }
 a{
@@ -289,6 +289,25 @@ footer p {
     text-align:center;
 }
 
+/* === ANIMAÇÕES === */
+[data-left]{
+    transform: translateX(-100px);
+    animation: transition forwards 1s;
+    opacity: 0;
+}
+[data-right]{
+    border: 1px solid ;
+    transform: translateX(100px);
+    animation: transition forwards 1s;
+    opacity: 0;
+}
+
+@keyframes transition {
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 @media (min-width: 1700px){
     /* === HEADER === */

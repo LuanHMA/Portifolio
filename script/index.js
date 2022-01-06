@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector("header ul.nav");
 const main = document.querySelector("main");
+const navLink = document.querySelectorAll(".nav-link");
 
 if(window.innerWidth > 768){
     menu.classList.remove("showMenu");
@@ -13,3 +14,12 @@ menuToggle.addEventListener("click", e=>{
     main.classList.toggle("desfocar");
 
 })
+
+navLink.forEach(item=> item.addEventListener("click", closeMenu))
+
+function closeMenu(){
+    menuToggle.classList.remove("menuActive");
+    main.classList.remove("desfocar");
+    menu.classList.remove("showMenu");
+}
+

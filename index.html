@@ -86,7 +86,7 @@
                     </a>
                 </div>
 
-                <div id="introduction">
+                <div id="introduction" data-left>
                     <h1 class="title">
                         Olá, eu sou Luan
                     </h1>
@@ -101,8 +101,8 @@
                     </a>
                 </div>
 
-                <div id="photo">
-                    <img src="img/Perfil.jpeg" alt="Perfil" width="200">
+                <div id="photo" >
+                    <img src="img/Perfil.jpeg" alt="Perfil" width="200" data-right> 
                 </div>
                 
             </div>
@@ -281,7 +281,7 @@
                 </div>
 
                 <div class="form-contact">
-                    <form action="POST">
+                    <form action="https://formsubmit.co/luanhenrique.devweb@gmail.com" method="POST">
                         <div class="field" id="field-name">
                             <input type="text" name="name" id="name" required placeholder="Nome">
                         </div>
@@ -292,7 +292,8 @@
                             <textarea name="subject" id="subject" cols="30" rows="10" required placeholder="Mensagem"></textarea>
                         </div>
                         <div class="field-button">
-                            <button class="btn button">Enviar</button>
+                            <input type="hidden" name="_next" value="https://luanhma.github.io/Portifolio/#contato">
+                            <button class="btn button" type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
