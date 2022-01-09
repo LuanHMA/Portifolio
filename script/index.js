@@ -89,4 +89,3 @@ if(left.length || right.length || titles.length || scale.length){
     animeScroll();
   }, 100));
 }
-
