@@ -74,7 +74,7 @@
         <section class="home" id="home">
             <div class="content-home content">
 
-                <div id="social-networks">
+                <div id="social-networks" data-left>
                     <a href="https://github.com/LuanHMA" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
@@ -101,8 +101,8 @@
                     </a>
                 </div>
 
-                <div id="photo" >
-                    <img src="img/Perfil.jpeg" alt="Perfil" width="200" data-right> 
+                <div id="photo" data-right>
+                    <img src="img/Perfil.jpeg" alt="Perfil" width="200"> 
                 </div>
                 
             </div>
@@ -111,10 +111,10 @@
         <section class="about" id="about">
             <h1 class="titulo">Sobre Mim</h1>
             <div class="content-about content">
-                <div class="image-about">
+                <div class="image-about" data-left>
                     <img src="img/perfil.png" >
                 </div>
-                <div class="info-about">
+                <div class="info-about" data-right>
                     <p>Meu nome é Luan Henrique, tenho 20 anos e sou estudante de Desenvolvimento Web e Ciência da Computação. Atualmente atuo pela parte do <strong>Front End</strong> onde desenvolvo Interfaces e alguns projetos pessoais utilizando tecnologias como <strong>HTML, CSS e JavaScript</strong>.</p>
 
                     <a href="#" class="btn button">
@@ -133,30 +133,35 @@
 
             <div class="content-skills content">
                 
-                <a href="#" class="card-link" data-toggle="modal" data-target="#modalHTML">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#modalHTML" data-scale>
                     <div class="skill">
                         <img src="img/icon-html5.svg" alt="HTML">
                     </div>
                     
                 </a>
 
-                <a href="#" class="card-link" data-toggle="modal" data-target="#modalCSS">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#modalCSS" data-scale>
                     <div class="skill">
                         <img src="img/icon-css.svg" alt="CSS">
                     </div>
                 </a>
 
-                <a href="#" class="card-link" data-toggle="modal" data-target="#modalJS">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#modalJS" data-scale>
                     <div class="skill">
                         <img src="img/icon-javascript.svg" alt="JavaScript">
                     </div>
                 </a>
 
-                <a href="#" class="card-link" data-toggle="modal" data-target="#modalBOOT">
+                <a href="#" class="card-link" data-toggle="modal" data-target="#modalBOOT" data-scale>
                     <div class="skill">
                         <img src="img/icon-boostrap.svg" alt="Bootstrap">
                     </div>
                 </a>
+
+                <p id="skills-interaction">
+                    <i class="bi bi-mouse" style="margin-right: 5px"></i>
+                    Clique para Interagir
+                </p>
 
 
             </div>
@@ -166,7 +171,8 @@
         <section class="projects" id="projects">
             <h1 class="titulo">Meus Projetos</h1>
 
-            <div class="content-projects">
+            <div class="content-projects" data-scale>
+
                 <div class="carousel slide" id="carousel-projects" data-ride="carousel">
 
                     <!-- Indicadores -->
@@ -244,7 +250,6 @@
                     
                 </div>
 
-
             </div>
         </section> 
         <!--End Projects-->
@@ -253,7 +258,7 @@
             <h1 class="titulo">Contato</h1>
 
             <div class="content-contact content">
-                <div class="info-contact">
+                <div class="info-contact" data-left>
                     <div class="info-location">
                         <i class="bi bi-geo-alt"></i>
                         <div>
@@ -280,7 +285,7 @@
 
                 </div>
 
-                <div class="form-contact">
+                <div class="form-contact" data-right>
                     <form action="https://formsubmit.co/luanhenrique.devweb@gmail.com" method="POST">
                         <div class="field" id="field-name">
                             <input type="text" name="name" id="name" required placeholder="Nome">
