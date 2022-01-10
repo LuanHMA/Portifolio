@@ -208,6 +208,7 @@ section.skills{
 /* === PROJETOS === */
 .content-projects{
     width: 100%;
+    margin: auto;
 }
 .carousel.slide{
     height: 100%;
