@@ -467,6 +467,9 @@ footer p {
     .content-about{
         grid-template-columns: 100%;
     }
+    .content-about .image-about img{
+        width: 50%;
+    }
     .content-about .info-about p{
         margin: 15px auto;
     }
