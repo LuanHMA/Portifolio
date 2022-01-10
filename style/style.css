@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
-}
 html{
     --azul: #246CEA;
     --darkBlue: #0f101b;
@@ -298,7 +295,7 @@ footer{
     text-decoration: none;
 }
 footer p {
-    font-size: .9rem;
+    font-size: 1rem;
     text-align:center;
 }
 
@@ -307,19 +304,20 @@ footer p {
     transform: scale(0);
 }
 [data-left]{
-    transform: translateX(-200px);
+    transform: translate3d(-10px,0,0);
     opacity: 0;
 }
 [data-right]{
     opacity: 0;
-    transform: translateX(200px);
+    transform: translate3d(10px,0,0);
+
 }
 .titulo{
-    transform: translateY(-100px);
+    transform: translateY(-30px);
     opacity: 0;
 }
 .animar{
-    animation: animar 0.5s ease-out forwards;    
+    animation: animar 0.5s ease-out forwards;   
 }
 @keyframes animar{
     to{
